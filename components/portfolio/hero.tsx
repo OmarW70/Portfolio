@@ -75,7 +75,7 @@ export function Hero() {
               style={{ animationDelay: "0.2s" }}
             >
               <span className="gradient-text">
-                {displayedName}
+                Omar Walid
               </span>
               <span 
                 className={`inline-block w-1 h-12 md:h-14 lg:h-16 ml-1 bg-primary align-middle transition-opacity ${showCursor ? 'opacity-100' : 'opacity-0'}`}
@@ -86,15 +86,14 @@ export function Hero() {
               className="text-2xl md:text-3xl text-foreground/80 font-medium animate-on-scroll opacity-0"
               style={{ animationDelay: "0.4s" }}
             >
-              Full Stack Developer
+              Front End Developer
             </h2>
             
             <p
               className="text-muted-foreground text-lg leading-relaxed animate-on-scroll opacity-0 max-w-lg"
               style={{ animationDelay: "0.5s" }}
             >
-              I craft accessible, pixel-perfect digital experiences with modern technologies. 
-              Passionate about building products that make a difference.
+              I’m a Front-End Developer focused on building responsive and user-friendly web interfaces.
             </p>
 
             {/* CTA Buttons */}
@@ -113,9 +112,9 @@ export function Hero() {
                 asChild
                 variant="outline"
                 size="lg"
-                className="border-primary/50 hover:bg-primary/10 hover:border-primary"
+                className="border-primary/50 "
               >
-                <Link href="/resume.pdf" target="_blank">
+                <Link href="/CV.pdf" target="_blank">
                   <Download size={18} className="mr-2" />
                   Resume
                 </Link>
@@ -128,7 +127,7 @@ export function Hero() {
               style={{ animationDelay: "0.7s" }}
             >
               <Link
-                href="https://github.com"
+                href="https://github.com/OmarW70"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 rounded-xl bg-secondary/50 border border-border hover:border-primary hover:bg-primary/10 hover:text-primary transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-primary/20"
@@ -137,7 +136,7 @@ export function Hero() {
                 <Github size={22} />
               </Link>
               <Link
-                href="https://linkedin.com"
+                href="https://linkedin.com/in/omarwalid2"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 rounded-xl bg-secondary/50 border border-border hover:border-accent hover:bg-accent/10 hover:text-accent transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-accent/20"
@@ -168,7 +167,7 @@ export function Hero() {
               {/* Main circle */}
               <div className="absolute inset-8 rounded-full bg-gradient-to-br from-secondary via-card to-secondary flex items-center justify-center border border-border">
                 <span className="text-7xl md:text-8xl font-bold gradient-text">
-                  AC
+                  OW
                 </span>
               </div>
             </div>

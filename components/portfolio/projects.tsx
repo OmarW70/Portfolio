@@ -8,65 +8,33 @@ import { Button } from "@/components/ui/button";
 
 const projects = [
   {
-    title: "E-Commerce Platform",
-    description:
-      "A full-featured e-commerce platform with real-time inventory management, payment processing, and analytics dashboard. Built for scale with modern architecture.",
-    technologies: ["Next.js", "TypeScript", "Prisma", "Stripe", "PostgreSQL"],
-    github: "https://github.com",
-    live: "https://example.com",
-    image: "/images/project-ecommerce.jpg",
-    category: "Full Stack",
+    title: "Health Care Clinic Landing Page",
+    description:"A simple healthcare website built using HTML, CSS, and JavaScript. It provides basic information about medical services, doctors, and healthcare support." , 
+    technologies: ["HTML", "CSS", "JavaScript"],
+    github: "https://github.com/OmarW70/health-care-clinic-website",
+    live: "https://omarw70.github.io/health-care-clinic-website/",
+    image: "/images/imgproject-1.jpeg",
+    category: "Front End",
   },
   {
-    title: "Task Management App",
-    description:
-      "A collaborative task management application with real-time updates, drag-and-drop functionality, and team workspaces. Perfect for remote teams.",
-    technologies: ["React", "Node.js", "Socket.io", "MongoDB", "Tailwind CSS"],
-    github: "https://github.com",
-    live: "https://example.com",
-    image: "/images/project-tasks.jpg",
-    category: "Web App",
+    title: "Location Page For Museum Website",
+    description: "This webpage shows the location of the Grand Egyptian Museum , It is designed using HTML, CSS, and JavaScript with a simple and user-friendly interface." , 
+    technologies: ["HTML" , "CSS" , "JavaScript"],
+    github: "https://github.com/OmarW70/Location-Page-Museum-Website-",
+    live: "https://omarw70.github.io/Location-Page-Museum-Website-/",
+    image: "/images/imgproject-2.jpeg",
+    category: "Front End",
   },
   {
-    title: "AI Content Generator",
-    description:
-      "An AI-powered content generation tool that helps create blog posts, social media content, and marketing copy using cutting-edge LLMs.",
-    technologies: ["Next.js", "OpenAI API", "Vercel AI SDK", "PostgreSQL"],
-    github: "https://github.com",
-    live: "https://example.com",
-    image: "/images/project-ai.jpg",
-    category: "AI / ML",
+    title: "E-commerce Landing Page ",
+    description: "A simple flower shop landing page built with HTML and CSS, featuring a clean and user-friendly design." ,
+    technologies: ["HTML", "CSS"],
+    github: "https://github.com/OmarW70/Mini-Website-About-Flowers",
+    live: "https://omarw70.github.io/Mini-Website-About-Flowers/",
+    image: "/images/proj3img.jpeg",
+    category: "Front End ",
   },
-  {
-    title: "Portfolio Builder",
-    description:
-      "A drag-and-drop portfolio builder that allows developers to create stunning portfolios without coding knowledge.",
-    technologies: ["React", "TypeScript", "DnD Kit", "Supabase"],
-    github: "https://github.com",
-    live: "https://example.com",
-    image: "/images/project-portfolio.jpg",
-    category: "SaaS",
-  },
-  {
-    title: "Weather Dashboard",
-    description:
-      "A beautiful weather dashboard with location-based forecasts, interactive maps, and historical data visualization.",
-    technologies: ["React", "Chart.js", "OpenWeather API", "Mapbox"],
-    github: "https://github.com",
-    live: "https://example.com",
-    image: "/images/project-weather.jpg",
-    category: "Web App",
-  },
-  {
-    title: "Code Snippet Manager",
-    description:
-      "A VS Code extension for organizing and sharing code snippets with syntax highlighting and powerful search.",
-    technologies: ["TypeScript", "VS Code API", "SQLite"],
-    github: "https://github.com",
-    live: "https://example.com",
-    image: "/images/project-code.jpg",
-    category: "Developer Tool",
-  },
+  
 ];
 
 export function Projects() {
@@ -122,14 +90,16 @@ export function Projects() {
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="gradient-border rounded-2xl overflow-hidden bg-card h-full flex flex-col hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 hover:-translate-y-2">
+
                 {/* Project Image */}
-                <div className="relative h-48 overflow-hidden bg-gradient-to-br from-primary/20 to-accent/20">
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/30 via-accent/20 to-primary/30 flex items-center justify-center">
-                    <span className="text-6xl font-bold text-foreground/10 group-hover:text-foreground/20 transition-colors">
-                      {project.title.charAt(0)}
-                    </span>
-                  </div>
-                  
+                <div className="relative h-48 overflow-hidden">
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    fill
+                    className="object-cover"
+                  />
+
                   {/* Category Badge */}
                   <div className="absolute top-4 left-4">
                     <span className="px-3 py-1 rounded-full bg-background/80 backdrop-blur-sm text-xs font-medium text-primary border border-primary/20">
@@ -231,7 +201,7 @@ export function Projects() {
             size="lg"
             className="border-primary/50 hover:bg-primary/10 hover:border-primary group"
           >
-            <Link href="https://github.com" target="_blank" rel="noopener noreferrer">
+            <Link href="https://github.com/OmarW70" target="_blank" rel="noopener noreferrer">
               View All Projects on GitHub
               <ArrowUpRight size={18} className="ml-2 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
             </Link>

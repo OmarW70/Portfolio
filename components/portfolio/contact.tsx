@@ -77,22 +77,12 @@ export function Contact() {
                   <div>
                     <p className="text-sm text-muted-foreground">Email</p>
                     <p className="text-foreground group-hover:text-primary transition-colors font-medium">
-                      hello@alexchen.dev
+                      ow8625954@gmail.com
                     </p>
                   </div>
                 </Link>
 
-                <div className="flex items-start gap-4">
-                  <div className="p-3 rounded-xl bg-gradient-to-br from-accent to-primary text-background">
-                    <MapPin size={20} />
-                  </div>
-                  <div>
-                    <p className="text-sm text-muted-foreground">Location</p>
-                    <p className="text-foreground font-medium">
-                      San Francisco, CA
-                    </p>
-                  </div>
-                </div>
+              
 
                 <div className="flex items-start gap-4">
                   <div className="p-3 rounded-xl bg-gradient-to-br from-primary to-accent text-background">
@@ -101,7 +91,7 @@ export function Contact() {
                   <div>
                     <p className="text-sm text-muted-foreground">Phone</p>
                     <p className="text-foreground font-medium">
-                      +1 (555) 123-4567
+                      +201020140240
                     </p>
                   </div>
                 </div>
@@ -109,11 +99,7 @@ export function Contact() {
             </div>
 
             {/* Quick note */}
-            <div className="gradient-border rounded-2xl p-6 bg-card">
-              <p className="text-muted-foreground text-sm leading-relaxed">
-                I typically respond within 24-48 hours. For urgent matters, please include &quot;URGENT&quot; in the subject line.
-              </p>
-            </div>
+          
           </div>
 
           {/* Contact Form */}
@@ -166,20 +152,7 @@ export function Contact() {
                   </div>
                 </div>
                 
-                <div>
-                  <label
-                    htmlFor="subject"
-                    className="block text-sm font-medium text-foreground mb-2"
-                  >
-                    Subject
-                  </label>
-                  <input
-                    type="text"
-                    id="subject"
-                    className="w-full px-4 py-3 bg-secondary/50 border border-border rounded-xl focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all text-foreground placeholder:text-muted-foreground"
-                    placeholder="What's this about?"
-                  />
-                </div>
+               
                 
                 <div>
                   <label

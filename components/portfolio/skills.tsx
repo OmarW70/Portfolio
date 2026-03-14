@@ -18,12 +18,10 @@ const skillCategories = [
     icon: Palette,
     color: "from-primary to-accent",
     skills: [
-      { name: "React", icon: "⚛️" },
-      { name: "Next.js", icon: "▲" },
-      { name: "TypeScript", icon: "TS" },
-      { name: "Tailwind CSS", icon: "🎨" },
-      { name: "Framer Motion", icon: "✨" },
-      { name: "Vue.js", icon: "💚" },
+            { name: "HTML" },
+      { name: "CSS" },
+      { name: "JavaScript" },
+      { name: "Bootstrap" },
     ],
   },
   {
@@ -31,12 +29,9 @@ const skillCategories = [
     icon: Server,
     color: "from-accent to-primary",
     skills: [
-      { name: "Node.js", icon: "🟢" },
-      { name: "Python", icon: "🐍" },
-      { name: "Express", icon: "🚂" },
-      { name: "GraphQL", icon: "◈" },
-      { name: "REST APIs", icon: "🔗" },
-      { name: "Prisma", icon: "△" },
+      { name: "Python"},
+      {name : "Java"}
+    
     ],
   },
   {
@@ -44,27 +39,11 @@ const skillCategories = [
     icon: Database,
     color: "from-primary via-accent to-primary",
     skills: [
-      { name: "PostgreSQL", icon: "🐘" },
-      { name: "MongoDB", icon: "🍃" },
-      { name: "Redis", icon: "🔴" },
-      { name: "MySQL", icon: "🐬" },
-      { name: "Supabase", icon: "⚡" },
-      { name: "Firebase", icon: "🔥" },
+      { name: "PostgreSQL"},
+      { name: "MySQL" },
     ],
   },
-  {
-    title: "DevOps & Cloud",
-    icon: Cloud,
-    color: "from-accent to-primary",
-    skills: [
-      { name: "Docker", icon: "🐳" },
-      { name: "AWS", icon: "☁️" },
-      { name: "Vercel", icon: "▲" },
-      { name: "Git", icon: "📦" },
-      { name: "CI/CD", icon: "🔄" },
-      { name: "Linux", icon: "🐧" },
-    ],
-  },
+  
 ];
 
 export function Skills() {
@@ -160,24 +139,7 @@ export function Skills() {
           className="mt-12 animate-on-scroll opacity-0"
           style={{ animationDelay: "0.6s" }}
         >
-          <div className="gradient-border rounded-2xl p-6 md:p-8 bg-card">
-            <h4 className="text-lg font-semibold text-foreground mb-4 flex items-center gap-2">
-              <Users size={20} className="text-primary" />
-              Also Experienced With
-            </h4>
-            <div className="flex flex-wrap gap-3">
-              {["Jest", "Cypress", "Figma", "Notion", "Jira", "Agile", "Scrum", "TDD", "WebSockets", "Three.js"].map(
-                (skill) => (
-                  <span
-                    key={skill}
-                    className="px-4 py-2 rounded-full bg-gradient-to-r from-primary/10 to-accent/10 border border-primary/20 text-sm font-medium text-foreground/80 hover:text-foreground hover:border-primary/50 hover:scale-105 transition-all duration-300 cursor-default"
-                  >
-                    {skill}
-                  </span>
-                )
-              )}
-            </div>
-          </div>
+
         </div>
       </div>
     </section>

@@ -38,7 +38,7 @@ export function Header() {
             href="/"
             className="text-2xl font-bold gradient-text hover:opacity-80 transition-opacity"
           >
-            OW
+            Omar.
           </Link>
 
           {/* Desktop Navigation */}

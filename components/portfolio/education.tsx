@@ -1,27 +1,34 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import { ExternalLink, GraduationCap } from "lucide-react";
+import { ExternalLink, GraduationCap, BookOpen } from "lucide-react";
 import Link from "next/link";
 
-const education = [
+const education = {
+  period: "2024 — Present",
+  title: "Computer Science & Artificial Intelligence",
+  institution: "Capital University",
+  institutionUrl: "#",
+  location: "Cairo, Egypt",
+};
+
+const courses = [
   {
-    period: "2024 — Present",
-    title: "Computer Science Student",
-    institution: "Capital University",
-    institutionUrl: "#",
-    description:
-      "Studying core computer science concepts including data structures, algorithms, and software engineering. Actively working on personal projects and improving front-end development skills.",
-    technologies: ["Programming", "Algorithms", "Problem Solving" , "Data Structures"],
+    period: "08/2025 – 09/2025",
+    title: "Machine Learning Internship",
+    institution: "National Telecommunication Institute (NTI)",
+    description : "Applied supervised and unsupervised learning techniques. Gained foundational knowledge of Neural Networks and explored their practical applications" , 
+    institutionUrl: "https://www.nti.sci.eg/",
+    technologies: ["Python", "Machine Learning", "Neural Networks"],
   },
+
   {
-    period: "2024",
-    title: "Frontend Development Learning",
-    institution: "Self Learning",
-    institutionUrl: "#",
-    description:
-      "Focused on learning modern frontend technologies and building responsive web applications while practicing UI development and web performance optimization.",
-    technologies: ["HTML", "CSS", "JavaScript", "React"],
+    period: "07/2025 – 08/2025",
+    title: "Database Internship",
+    institution: "EDGE-PRO For Information Systems",
+    description : "Understanding core concepts of relational databases. Working with Entity-Relationship (ER) modeling , normalization , and schema design.", 
+    institutionUrl: "https://www.linkedin.com/company/edge-pro-for-information-systems/posts/?feedView=all",
+    technologies: ["PostgreSQL", "ERD (Entity Relationship Diagrams)"],
   },
 ];
 
@@ -40,148 +47,130 @@ export function Education() {
       { threshold: 0.1 }
     );
 
-    const elements = sectionRef.current?.querySelectorAll(".animate-on-scroll");
+    const elements =
+      sectionRef.current?.querySelectorAll(".animate-on-scroll");
     elements?.forEach((el) => observer.observe(el));
 
     return () => observer.disconnect();
   }, []);
 
   return (
-    <section id="education" ref={sectionRef} className="py-24 px-6 relative overflow-hidden">
-      
-      <div className="absolute right-0 top-1/2 -translate-y-1/2 w-96 h-96 bg-accent/10 rounded-full blur-3xl" />
-      
-      <div className="container mx-auto max-w-5xl relative z-10">
+    <section
+      id="education"
+      ref={sectionRef}
+      className="py-24 px-6 relative overflow-hidden"
+    >
+      <div className="container mx-auto max-w-4xl relative z-10">
 
+        {/* Title */}
         <div className="text-center mb-16 animate-on-scroll opacity-0">
+
           <span className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
             Academic Journey
           </span>
 
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold">
             <span className="gradient-text">Education</span>
           </h2>
 
-          <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-            My academic background and learning journey in computer science and web development
-          </p>
         </div>
 
-        <div className="relative">
+        {/* Education Card */}
+        <div className="bg-card border border-border rounded-2xl p-6 flex gap-5 items-start animate-on-scroll opacity-0 mb-16">
 
-          {/* Timeline line */}
-          <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-primary via-accent to-primary md:-translate-x-1/2" />
+          <div className="w-12 h-12 flex items-center justify-center rounded-lg bg-primary/10 text-primary">
+            <GraduationCap size={22} />
+          </div>
 
-          <div className="space-y-12">
+          <div>
 
-            {education.map((edu, index) => (
+            <h3 className="text-xl font-bold text-foreground">
+              {education.title}
+            </h3>
+
+            <p className="text-primary">
+  {education.institution}
+</p>
+
+            <div className="text-sm text-muted-foreground mt-2 flex gap-2">
+
+              <span>{education.period}</span>
+
+              <span>|</span>
+
+              <span>{education.location}</span>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        {/* Courses / Internships */}
+        <div className="animate-on-scroll opacity-0">
+
+          <h3 className="text-4xl md:text-5xl font-bold text-center mb-10">
+            <span className="gradient-text">Courses & Internships</span>
+          </h3>
+
+          <div className="grid md:grid-cols-2 gap-6">
+
+            {courses.map((course) => (
 
               <div
-                key={edu.title + edu.institution}
-                className={`relative grid md:grid-cols-2 gap-8 animate-on-scroll opacity-0 ${
-                  index % 2 === 0 ? "md:text-right" : ""
-                }`}
-                style={{ animationDelay: `${index * 0.15}s` }}
+                key={course.title}
+                className="bg-card border border-border rounded-xl p-6 flex gap-4"
               >
 
-                {/* Timeline dot */}
-                <div className="absolute left-0 md:left-1/2 w-4 h-4 rounded-full bg-gradient-to-br from-primary to-accent -translate-x-1/2 mt-2 ring-4 ring-background" />
+                <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-accent/10 text-accent">
+                  <BookOpen size={18} />
+                </div>
 
-                {index % 2 === 0 ? (
-                  <>
-                    <div className="pl-8 md:pl-0 md:pr-12">
+                <div>
 
-                      <span className="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium mb-3">
-                        {edu.period}
+                  <span className="text-xs text-muted-foreground">
+                    {course.period}
+                  </span>
+
+                  <h4 className="text-lg font-semibold mt-1">
+                    {course.title}
+                  </h4>
+
+                  <Link
+                    href={course.institutionUrl}
+                    target="_blank"
+                    className="text-accent inline-flex items-center gap-1 text-sm"
+                  >
+                    {course.institution}
+                    <ExternalLink size={12} />
+                  </Link>
+                  <p className="text-sm text-muted-foreground mt-2">
+  {course.description}
+</p>
+
+                  <div className="flex flex-wrap gap-2 mt-3">
+
+                    {course.technologies.map((tech) => (
+                      <span
+                        key={tech}
+                        className="px-2 py-1 text-xs bg-accent/10 text-accent rounded-full"
+                      >
+                        {tech}
                       </span>
+                    ))}
 
-                      <div className="gradient-border rounded-2xl p-6 bg-card hover:shadow-lg hover:shadow-primary/10 transition-all duration-300">
+                  </div>
 
-                        <h3 className="text-xl font-bold text-foreground mb-1">
-                          {edu.title}
-                        </h3>
-
-                        <Link
-                          href={edu.institutionUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-primary hover:text-accent transition-colors inline-flex items-center gap-1 mb-3 font-medium"
-                        >
-                          {edu.institution}
-                          <ExternalLink size={14} />
-                        </Link>
-
-                        <p className="text-muted-foreground mb-4 leading-relaxed text-left">
-                          {edu.description}
-                        </p>
-
-                        <div className="flex flex-wrap gap-2 justify-start">
-                          {edu.technologies.map((tech) => (
-                            <span
-                              key={tech}
-                              className="px-3 py-1 text-xs font-medium text-primary bg-primary/10 rounded-full border border-primary/20"
-                            >
-                              {tech}
-                            </span>
-                          ))}
-                        </div>
-
-                      </div>
-                    </div>
-
-                    <div className="hidden md:block" />
-                  </>
-                ) : (
-                  <>
-                    <div className="hidden md:block" />
-
-                    <div className="pl-8 md:pl-12">
-
-                      <span className="inline-block px-3 py-1 rounded-full bg-accent/10 text-accent text-sm font-medium mb-3">
-                        {edu.period}
-                      </span>
-
-                      <div className="gradient-border rounded-2xl p-6 bg-card hover:shadow-lg hover:shadow-accent/10 transition-all duration-300">
-
-                        <h3 className="text-xl font-bold text-foreground mb-1">
-                          {edu.title}
-                        </h3>
-
-                        <Link
-                          href={edu.institutionUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-accent hover:text-primary transition-colors inline-flex items-center gap-1 mb-3 font-medium"
-                        >
-                          {edu.institution}
-                          <ExternalLink size={14} />
-                        </Link>
-
-                        <p className="text-muted-foreground mb-4 leading-relaxed">
-                          {edu.description}
-                        </p>
-
-                        <div className="flex flex-wrap gap-2">
-                          {edu.technologies.map((tech) => (
-                            <span
-                              key={tech}
-                              className="px-3 py-1 text-xs font-medium text-accent bg-accent/10 rounded-full border border-accent/20"
-                            >
-                              {tech}
-                            </span>
-                          ))}
-                        </div>
-
-                      </div>
-                    </div>
-                  </>
-                )}
+                </div>
 
               </div>
+
             ))}
 
           </div>
+
         </div>
+
       </div>
     </section>
   );
